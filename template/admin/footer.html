@@ -1,0 +1,257 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Collective Admin Panel a Flat Bootstrap Responsive Website Template | Home :: W3Layouts</title>
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="/static/admin/css/style-starter.css">
+
+  <!-- google fonts -->
+  <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+</head>
+
+<body class="sidebar-menu-collapsed">
+  <div class="se-pre-con"></div>
+<section>
+  <!-- sidebar menu start -->
+  <div class="sidebar-menu sticky-sidebar-menu">
+
+    <!-- logo start -->
+    <div class="logo">
+      <h1><a href="/admin_index/">Collective</a></h1>
+    </div>
+
+  <!-- if logo is image enable this -->
+    <!-- image logo --
+    <div class="logo">
+      <a href="index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" class="img-fluid" style="height:35px;" />
+      </a>
+    </div>
+    <!-- //image logo -->
+
+    <div class="logo-icon text-center">
+      <a href="/admin_index/" title="logo"><img src="/static/admin/images/logo.png" alt="logo-icon"> </a>
+    </div>
+    <!-- //logo end -->
+
+    <div class="sidebar-menu-inner">
+
+      <!-- sidebar nav start -->
+      <ul class="nav nav-pills nav-stacked custom-nav">
+        <li class="active"><a href="/admin_index/"><i class="fa fa-tachometer"></i><span> Dashboard</span></a>
+        </li>
+       <!--  <li class="menu-list">
+          <a href="#"><i class="fa fa-cogs"></i>
+            <span>Elements <i class="lnr lnr-chevron-right"></i></span></a>
+          <ul class="sub-menu-list">
+            <li><a href="/carousels/">Carousels</a> </li>
+            <li><a href="/cards/">Default cards</a> </li>
+            <li><a href="/people/">People cards</a></li>
+          </ul>
+        </li> -->
+        <li><a href="/product_display/"><i class="fa fa-product-hunt"></i> <span>Products</span></a></li>
+       <!--  <li><a href="/admin_blocks/"><i class="fa fa-th"></i> <span>Content blocks</span></a></li> -->
+        <li><a href="/admin_forms/"><i class="fa fa-file-text"></i> <span>Forms</span></a></li>
+        <li><a href="/image_enter/"><i class="fa fa-image"></i> <span>Gallery</span></a></li>
+      </ul>
+      <!-- //sidebar nav end -->
+      <!-- toggle button start -->
+      <a class="toggle-btn">
+        <i class="fa fa-angle-double-left menu-collapsed__left"><span>Collapse Sidebar</span></i>
+        <i class="fa fa-angle-double-right menu-collapsed__right"></i>
+      </a>
+      <!-- //toggle button end -->
+    </div>
+  </div>
+  <!-- //sidebar menu end -->
+  <!-- header-starts -->
+  <div class="header sticky-header">
+
+    <!-- notification menu start -->
+    <div class="menu-right">
+      <div class="navbar user-panel-top">
+       <!--  <div class="search-box">
+          <form action="#search-results.html" method="get">
+            <input class="search-input" placeholder="Search Here..." type="search" id="search">
+            <button class="search-submit" value=""><span class="fa fa-search"></span></button>
+          </form>
+        </div> -->
+        <div class="user-dropdown-details d-flex ">
+          <h5 style="text-align: center ; color:green ;margin-top: 12px">{{success}}</h5>
+          <div>
+          {% if request.session.myid %} 
+          <!-- <h5 style="text-align: center ; color:green ;margin-top: 12px">{{success}}</h5> -->
+          <div class="profile_details_left">
+            <ul class="nofitications-dropdown">
+              <div class="profile_details" style="margin-top: 5px; size: 20px;">
+             <h3><a href="/admin_logout/"> <i class="fa fa-sign-out"><span>Logout</span></i></a></h3>
+        </div>
+              <!-- <li class="dropdown">
+                <a href="/admin_logout/"><i class="fa fa-power-off" style="font-size:24px;color: #929292;"></i></a>
+              </li> -->
+          {% else %}
+        
+              <span class="profile_details">
+                <a href="/admin_register/"><i class="fa fa-registered  " style="font-size:20px; color: blue;margin-bottom: 30px" ><span>Register</span></i></a>
+              </span>
+              <span>
+                <a href="/admin_login/"><i class="fa fa-sign-in" style="font-size:20px;color: blue;margin-left: 50px"><span>Login</span></i></a>
+              </span>
+          
+          {% endif %}
+          </div>
+            </ul>
+          </div>
+
+
+
+
+          <div class="profile_details">
+            <ul>
+              <li class="dropdown profile_details_drop">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="dropdownMenu3" >
+
+                  <div class="profile_img">
+                    <i class="fa fa-user-circle-o" style="font-size:30px;color: blue;margin-top: 9px"></i>
+                    <div>
+                      <span></span>
+                    </div>
+                  </div>
+                </a>
+                <ul class="dropdown-menu drp-mnu" aria-labelledby="dropdownMenu3">
+                  <li class="user-info">
+                    <h5 class="user-name"><p class="nav-link" style="font-size: 20;color: white"><b>{{request.session.myname}}</b></p></h5>
+                    <span class="status ml-2">Available</span>
+                  </li>
+                  <li> <a href="#"><i class="lnr lnr-user"></i>My Profile</a> </li>
+                  <li> <a href="#"><i class="lnr lnr-users"></i>1k Followers</a> </li>
+                  <li> <a href="#"><i class="lnr lnr-cog"></i>Setting</a> </li>
+                  <li> <a href="#"><i class="lnr lnr-heart"></i>100 Likes</a> </li>
+                 
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--notification menu end -->
+  </div>
+  <!-- //header-ends -->
+
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+  <!--footer section start-->
+<footer class="dashboard">
+  <p>&copy 2020 Collective. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank"
+      class="text-primary">W3layouts.</a></p>
+</footer>
+<!--footer section end-->
+<!-- move top -->
+<button onclick="topFunction()" id="movetop" class="bg-primary" title="Go to top">
+  <span class="fa fa-angle-up"></span>
+</button>
+<script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function () {
+    scrollFunction()
+  };
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("movetop").style.display = "block";
+    } else {
+      document.getElementById("movetop").style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+<!-- /move top -->
+
+
+<script src="/static/admin/js/jquery-3.3.1.min.js"></script>
+<script src="/static/admin/js/jquery-1.10.2.min.js"></script>
+
+<!-- chart js -->
+<script src="/static/admin/js/Chart.min.js"></script>
+<script src="/static/admin/js/utils.js"></script>
+<!-- //chart js -->
+
+<!-- Different scripts of charts.  Ex.Barchart, Linechart -->
+<script src="/static/admin/js/bar.js"></script>
+<script src="/static/admin/js/linechart.js"></script>
+<!-- //Different scripts of charts.  Ex.Barchart, Linechart -->
+
+
+<script src="/static/admin/js/jquery.nicescroll.js"></script>
+<script src="/static/admin/js/scripts.js"></script>
+
+<!-- close script -->
+<script>
+  var closebtns = document.getElementsByClassName("close-grid");
+  var i;
+
+  for (i = 0; i < closebtns.length; i++) {
+    closebtns[i].addEventListener("click", function () {
+      this.parentElement.style.display = 'none';
+    });
+  }
+</script>
+<!-- //close script -->
+
+<!-- disable body scroll when navbar is in active -->
+<script>
+  $(function () {
+    $('.sidebar-menu-collapsed').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll when navbar is in active -->
+
+ <!-- loading-gif Js -->
+ <script src="/static/admin/js/modernizr.js"></script>
+ <script>
+     $(window).load(function () {
+         // Animate loader off screen
+         $(".se-pre-con").fadeOut("slow");;
+     });
+ </script>
+ <!--// loading-gif Js -->
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/static/admin/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+  

@@ -1,0 +1,151 @@
+{% extends "admin/footer.html" %}
+{% block content %}
+<!-- main content start -->
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Products</li>
+            </ol>
+        </nav>
+        <style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("img_nature.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #blue;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+        <!-- //breadcrumbs -->
+        <!-- forms -->
+        <section class="forms">
+            <!-- forms 1 -->
+            <div class="card card_border py-2 mb-4">
+                <div class="cards__heading">
+                    <h3>Products <span></span></h3>
+                </div>
+                <div class="card-body">
+
+                    <form action="/admin_product/" method="post" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+                        <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="input__label">Product Name</label>
+                            <input type="text" name="product_name" class="form-control input-style" id="name"
+                                aria-describedby="text" placeholder="Enter Product Name">
+                           
+                        </div>
+                        <div class="form-group col-md-6">
+                                <label for="inputState" class="input__label">Category</label>
+                                <select id="inputState" class="form-control input-style" name="category">
+                                    <option selected> select</option>
+                                    <option>Service</option>
+                                    <option>Accessories</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <label class="input__label">Product Image</label>
+                         <div class="custom-file">
+                            <input type="file" name="image" class="custom-file-input" id="image" required>
+                            <label class="custom-file-label" for="validatedCustomFile">Choose Image...</label>
+                            <!-- <div class="invalid-feedback">Example invalid custom file feedback</div> -->
+                        </div>
+
+                         <div class="form-group">
+                            <br>
+                            <label class="input__label">Product Discription</label>
+                            <textarea rows="5" cols="5" name="discription" type="text" class="form-control input-style" id="text"
+                                 placeholder="Product Discription"></textarea>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="exampleInputPassword1" class="input__label">Password</label>
+                            <input type="password" class="form-control input-style" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check check-remember check-me-out">
+                            <input type="checkbox" class="form-check-input checkbox" id="exampleCheck1">
+                            <label class="form-check-label checkmark" for="exampleCheck1">Check me out</label>
+                        </div> -->
+                        <button type="submit" class="btn btn-primary btn-style mt-4">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <!-- //forms 1 -->
+
+            <!-- forms 2 -->
+            
+            <!-- // -->
+            <!-- supported elements -->
+
+        </section>
+        <!-- //forms -->
+        </section>
+        <!-- //forms  -->
+
+    </div>
+    <!-- //content -->
+
+</div>
+<!-- main content end-->
+</section>
+{% endblock %}

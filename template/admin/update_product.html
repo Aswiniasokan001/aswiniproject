@@ -1,0 +1,132 @@
+{% extends "admin/footer.html" %}
+{% block content %}
+<!-- main content start -->
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin_index/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Products</li>
+            </ol>
+        </nav>
+        <!-- //breadcrumbs -->
+        <!-- forms -->
+        <section class="forms">
+            <!-- forms 1 -->
+            <div class="card card_border py-2 mb-4">
+                <div class="cards__heading">
+                    <h3>Products <span></span></h3>
+                </div>
+                <div class="card-body">
+                    {% for x in data %}
+                   <form action="/update_product/?uid={{x.id}}" method="post" enctype="multipart/form-data">
+
+                        {% csrf_token %}
+                        <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="input__label">Product Name</label>
+                            <input type="text" name="product_name" class="form-control input-style" id="product_name"
+                                aria-describedby="text" placeholder="Enter Product Name" value="{{x.product_name}}">
+                           
+                        </div>
+                        <div class="form-group col-md-6">
+                                <label for="inputState" class="input__label">Category</label>
+                                <select id="category" class="form-control input-style" name="category" value="{{x.category}}">
+                                    <option selected> select</option>
+                                    <option>Service</option>
+                                    <option>Accessories</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <!-- <label class="input__label">Product Image</label> -->
+                        <label class="input__label">Product Image</label>
+                         <div class="custom-file">
+                            <input type="file" name="image" class="custom-file-input" id="image" value="{{x.image.url}}">
+                            <!-- <label class="custom-file-label" for="validatedCustomFile">Choose Image...</label> -->
+                            <!-- <div class="invalid-feedback">Example invalid custom file feedback</div> -->
+                        </div>
+                        <div class="form-group">
+                                <div class="col-md-8">
+                                <div class="input-group input-icon right">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-bars" style="width: 14px; height: 14px;"></i>
+                                    </span>
+                                    <label for="up">Do you want update image</label>
+                                    <input type="radio"  id="image" name="image" onchange="hide();" value="yes">Yes
+                                    <input type="radio"  id="image" name="image" onchange="hide();" checked="" value="no">No   
+                                 </div>
+
+                                 <div class="form-group" style="display: none;" id="proup">
+                                    <label for="FILE">Update Image</label>
+                                    <input type="file" class="form-control" id="FILE" name="image" placeholder="image">     
+                                 </div>
+                             </div>
+                        </div>
+
+                         <div class="form-group">
+                            <br>
+                            <label class="input__label">Product Discription</label>
+                            <textarea rows="5" cols="5" name="discription" type="text" class="form-control input-style" id="text"
+                                 placeholder="Product Discription" value="{{x.discription}}"></textarea>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="exampleInputPassword1" class="input__label">Password</label>
+                            <input type="password" class="form-control input-style" id="exampleInputPassword1"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check check-remember check-me-out">
+                            <input type="checkbox" class="form-check-input checkbox" id="exampleCheck1">
+                            <label class="form-check-label checkmark" for="exampleCheck1">Check me out</label>
+                        </div> -->
+                        <button type="submit" class="btn btn-primary btn-style mt-4">Submit</button>
+                    </form>
+                    {% endfor %}
+                </div>
+                </div>
+            </div>
+            <!-- //forms 1 -->
+
+            <!-- forms 2 -->
+            
+            <!-- // -->
+            <!-- supported elements -->
+
+        </section>
+        <!-- //forms -->
+        </section>
+        <!-- //forms  -->
+
+    </div>
+    <!-- //content -->
+
+</div>
+<!-- main content end-->
+</section>
+
+<script type="text/javascript">
+        function hide(){
+            var chekyes = document.getElementById("chekyes");
+            var file = document.getElementById("file");
+        
+
+
+        file.style.display = chekyes.checked ? "block" : "none";
+        if (chekyes.checked){
+            var img = document.getElementById("image").required = true;
+
+        }
+        else{
+            var img = document.getElementById("image").required = false;
+
+
+        }
+
+    }
+</script>
+
+{% endblock %}

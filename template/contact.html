@@ -1,0 +1,71 @@
+{% extends "header.html" %}
+{% block content %}
+ <!-- inner banner -->
+ <section class="w3l-inner-banner-main">
+   <div class="about-inner inner2">
+     <div class="container seen-w3">
+       <h3 class="inner-title">Contact Us</h3>
+       <ul class="breadcrumbs-custom-path">
+         <li><a href="index.html">Home</a></li>
+         <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+         <li class="active">Contact</li>
+       </ul>
+     </div>
+   </div>
+ </section>
+ <!-- //inner banner -->
+ <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+<!-- contact block -->
+<section class="w3l-contacts-12 pt-5">
+  <div class="contact-top py-md-3">
+    <div class="container">
+      <div class="contacts12-main">
+        <h3 class="title-main title-2">Get In Touch</h3>
+        <p class="sub-title">Wholesale Trader of architectural hardware, toughened glasses & glass work service since 2017 in Kannur, Kerala.</p>
+        <form action="#" method="post" class="main-input">
+          {% csrf_token %}
+          <div class="top-inputs d-grid">
+            <input type="text" placeholder="Name" name="Name" id="Name" required="">
+            <input type="email" name="email" placeholder="Email" id="email" required="">
+          </div>
+          <input type="text" placeholder="Phone Number" name="Number" id="w3lName" required="">
+          <textarea placeholder="Message" name="Message" id="Message" required=""></textarea>
+          <div class="d-flex">
+            <button type="submit" class="button raised hoverable  ml-auto">
+              <div class="anim"></div><span>Send Message</span>
+            </button>
+          </div>
+        </form>
+        <div class="contact mt-md-4 mt-5">
+          <p class="contact-text-sub">London,</p>
+          <p class="contact-text-sub">75 West Rock, Maple Building</p>
+          <a href="mailto:hello@example.com">
+            <p class="contact-text-sub email-2">hello@example.com</p>
+          </a>
+          <a href="tel:+7-800-999-800">
+            <p class="contact-text-sub">+7-800-999-800</p>
+          </a>
+          <div class="buttons-teams">
+            <a href="#team"><span class="fa fa-facebook-square" aria-hidden="true"></span></a>
+            <a href="#team"><span class="fa fa-twitter-square" aria-hidden="true"></span></a>
+            <a href="#team"><span class="fa fa-google-plus-square" aria-hidden="true"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="map mt-5">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158858.47340002653!2d-0.24168120642536509!3d51.52855824164916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C+UK!5e0!3m2!1sen!2sin!4v1562822037850!5m2!1sen!2sin"
+      width="100%" height="400" frameborder="0" style="border:0; display:block;" allowfullscreen></iframe>
+  </div>
+</section>
+<!-- //contact block -->
+<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+{% endblock %}

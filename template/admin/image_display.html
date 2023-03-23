@@ -1,0 +1,92 @@
+{% extends "admin/footer.html" %}
+{% block content %}
+<!-- main content start -->
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin_index/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+            </ol>
+        </nav>
+        <!-- //breadcrumbs -->
+        <!-- forms -->
+        <section class="forms">
+            <!-- forms 1 -->
+            <div class="card card_border py-2 mb-4">
+                <div class="cards__heading">
+                    <h3>Gallery <span></span></h3>
+                </div>
+                <div class="card-body">
+
+                    <style>
+                        table {
+                            border-collapse: collapse;
+                            width: 100%;
+                        }
+                        th {
+                            background-color: #96D4D4;
+                        }
+                        th, td {
+                            padding: 8px;
+                            text-align: center;
+                            border-bottom: 1px solid #DDD;
+                            border: 1px solid black;
+                        }
+                    tr:hover {background-color: #D6EEEE;}
+                </style>
+                      
+                        <table style="width: 100%">
+                        
+                          <tr>
+                            <!-- <th>sno</th>
+                            <th>Product Name</th>
+                            <th>Category</th> -->
+                            <th><b>Image</b></th>
+                            <!-- <th>Discription</th> -->
+                            <!-- <th>update</th>
+                            <th>Delete</th> -->
+                          </tr>
+                        
+                        {% for x in port %}
+                          <tr>
+                            <!-- <td>{{forloop.counter}}</td>
+                            <td>{{x.product_name}}</td>
+                            <td>{{x.category}}</td> -->
+                             <td>
+                                <img style="height: 200px; width: 200px;"src="{{x.images.url}}">
+                            </td>
+                            <!-- <td>{{x.discription}}</td> -->
+                           
+                            <!-- <td><a href="/update_product/?uid={{x.id}}"><i class="fa fa-edit"></i></a></td>
+                            <td><a href="/product_delete/?uid={{x.id}}"><i class="fa fa-trash"></i></a></td> -->
+                        
+                          </tr>
+                           {% endfor %}
+                      </table>
+                </div>
+            </div>
+            <!-- //forms 1 -->
+
+            <!-- forms 2 -->
+            
+            <!-- // -->
+            <!-- supported elements -->
+
+        </section>
+        <!-- //forms -->
+        </section>
+        <!-- //forms  -->
+
+    </div>
+    <!-- //content -->
+
+</div>
+<!-- main content end-->
+</section>
+
+{% endblock %}

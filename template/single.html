@@ -1,0 +1,79 @@
+{% extends "header.html" %}
+{% block content %}
+ <!-- inner banner -->
+ <section class="w3l-inner-banner-main">
+   <div class="about-inner inner2">
+     <div class="container seen-w3">
+       <h3 class="inner-title">Single Page</h3>
+       <ul class="breadcrumbs-custom-path">
+         <li><a href="/">Home</a></li>
+         <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+         <li class="active">Single Page</li>
+       </ul>
+     </div>
+   </div>
+ </section>
+ <!-- //inner banner -->
+ <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+{% for x in sngl %}
+<section class="text-22 py-5">
+  <div class="py-md-3">
+    <div class="container">
+      <div class="text-txt">
+        <h3><a href="/single/?pid={{x.id}}">{{x.product_name}}</a> </h3>
+        <h4>
+                <a href="/single/?pid={{x.id}}">{{x.category}}</a>
+              </h4>
+        <div class="two-columns mt-4">
+          <div class="left-column">
+           <div class="col-sm-4 p-3"> <img style="width: 300px;height: 300px" src="{{x.image.url}}" alt=""></div>
+          </div>
+          <div >
+            <div class="col-sm-8 p-3"><aside><h6 href="/single/?pid={{x.id}}">{{x.discription}}</h6></aside></div>
+            <!-- <p>Vestibulum feugiat tortor vitae diam euismod, ut et inter dum nisi fermentum. Pellentesque sed sodales
+              nunc. Vestibulum laoreet erat nisi, sit amet ultrices. Vestibulum feugiat tortor vitae diam euismod, ut et
+              inter dum nisi fermentum. Pellentesque sed sodales nunc. Vestibulum laoreet erat nisi, sit amet ultrices
+              vitae diam.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut debitis nobis veniam fugit. Unde, culpa
+              illum
+              ipsum tempora excepturi quo porro, asperiores quibusdam molestiae iure ea facilis consequuntur quaerat
+              fuga.
+            </p> -->
+          </div>
+        </div>
+        <!-- <div class="text24-max-align mt-4">
+          <h3>Sed ut perspiciatis unde omnis</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel nam tenetur sequi assumenda fuga sit
+            non
+            praesentium aut voluptatibus rem repellendus amet fugit, ab eligendi ratione, placeat quo ducimus at? Et
+            suscipit earum reiciendis perferendis, dignissimos, labore quos voluptatibus voluptas ipsam placeat
+            voluptates
+            laborum maxime asperiores natus tempore incidunt. </p>
+          <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui quia repudiandae ducimus minus itaque magni
+            laboriosam sapiente eos. At vitae dicta officia accusantium eveniet voluptatibus.</p class=>
+          <div class="text24-list mt-4">
+            <ol class="p-0 m-0">
+              <li>Quisque sagittis lacus eu lorem sodalesd enean adipiscing.</li>
+              <li>Sed ut perspiciatis unde omnis natus</li>
+              <li>Eaque ipsa quae ab illo inventore veritatis</li>
+              <li>It’s limited seating! Hurry up. Get the Coaching Training for Free</li>
+              <li>Nam libero tempore, cum soluta nobis est eligendi optio </li>
+              <li>Onec Consequat sapien ut cursus rhoncus</li>
+            </ol>
+          </div>
+        </div> -->
+      </div>
+{% endfor %}
+
+    </div>
+  </div>
+</section>
+<!-- text24 block -->
+<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+{% endblock %}

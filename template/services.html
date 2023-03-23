@@ -1,0 +1,115 @@
+{% extends "header.html" %}
+{% block content %}
+ <!-- inner banner -->
+ <section class="w3l-inner-banner-main">
+   <div class="about-inner inner2">
+     <div class="container seen-w3">
+       <h3 class="inner-title">Our Services</h3>
+       <ul class="breadcrumbs-custom-path">
+         <li><a href="/">Home</a></li>
+         <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+         <li class="active">Services</li>
+       </ul>
+     </div>
+   </div>
+ </section>
+ <!-- //inner banner -->
+ <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+<!-- services block -->
+<section class="w3l-services-1">
+  <div class="services1">
+    <div class="container">
+      <div class="heading text-center mx-auto">
+        <h3 class="head">Explore Our Main Services </h3>
+        <p class="my-3 head">Door & Window, Hinges & Fittings
+
+        Base metal mountings, fittings and similar articles suitable for furniture, doors, staircases, windows, blinds, coachwork, saddlery, trunks, chests, caskets or the like; base metal hat-racks, hat-pegs, brackets and similar fixtures; castors with mountings of base metal; automatic door closures of base metal</p>
+      </div>
+
+      <div class="row services1-content mt-5">
+    {% for x in srv %}
+        <div class="col-md-4 column">
+          <a href="/single/?pid={{x.id}}">
+            <img style="width: 300px;height: 300px" src="{{x.image.url}}" alt=""></a>
+            <div class="service-info">
+              <h4>
+                <a href="/single/?pid={{x.id}}">{{x.product_name}}</a>
+              </h4>
+              <p href="/single/?pid={{x.id}}">{{x.discription}}</p>
+            </div>
+          </a>
+
+        </div>
+        <!-- <div class="col-md-4 column my-md-0 my-4">
+          <a href="/single/">
+            <img src="/static/images/image8.jpg" alt="" class="img-fluid img-responsive" />
+            <div class="service-info">
+              <h4>Doors Service</h4>
+              <p>Aliquam bibendum ultricies mauris, quis mollis tortor congue ac.</p>
+            </div>
+          </a>
+        </div> -->
+        <!-- <div class="col-md-4 column">
+          <a href="single.html">
+            <img src="/static/images/image7.jpg" alt="" class="img-fluid img-responsive" />
+            <div class="service-info">
+              <h4>Express Service</h4>
+              <p>Aliquam bibendum ultricies mauris, quis mollis tortor congue ac.</p>
+            </div>
+          </a>
+        </div>
+      </div> -->
+       
+      <!-- <div class="row services1-content mt-md-4">
+        <div class="col-md-4 column my-md-0 my-4">
+          <a href="/single/">
+            <img src="/static/images/image6.jpg" alt="" class="img-fluid img-responsive" />
+            <div class="service-info">
+              <h4>Maintenance</h4>
+              <p>Aliquam bibendum ultricies mauris, quis mollis tortor congue ac.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 column">
+          <a href="/single/">
+            <img src="/static/images/image5.jpg" alt="" class="img-fluid img-responsive" />
+            <div class="service-info">
+              <h4>Engineering Services</h4>
+              <p>Aliquam bibendum ultricies mauris, quis mollis tortor congue ac.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 column mt-md-0 mt-4">
+          <a href="/single/">
+            <img src="/static/images/image4.jpg" alt="" class="img-fluid img-responsive" />
+            <div class="service-info">
+              <h4>Technical Services</h4>
+              <p>Aliquam bibendum ultricies mauris, quis mollis tortor congue ac.</p>
+            </div>
+          </a>
+        </div> -->
+        {% endfor %}
+      </div>
+   
+
+    </div>
+  </div>
+   
+</section>
+<!-- //services block -->
+<div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+<!-- features -->
+
+<!-- //features -->
+<!-- <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;"> -->
+        <!---728x90--->
+
+    </div>
+    
+{% endblock %}

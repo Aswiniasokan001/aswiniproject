@@ -1,0 +1,68 @@
+{% extends "header.html" %}
+{% block content %}
+ <!-- inner banner -->
+ <section class="w3l-inner-banner-main">
+   <div class="about-inner inner2">
+     <div class="container seen-w3">
+       <h3 class="inner-title">Portfolio</h3>
+       <ul class="breadcrumbs-custom-path">
+         <li><a href="index.html">Home</a></li>
+         <li><span class="fa fa-angle-right" aria-hidden="true"></span></li>
+         <li class="active">Portfolio</li>
+       </ul>
+     </div>
+   </div>
+ </section>
+ <!-- //inner banner -->
+ <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+ <!-- portfolio1 -->
+ <section class="w3l-portfolios-1">
+   <div class="portfolio1">
+     <div class="container">
+       <h3 class="title-main">Our Gallery</h3>
+       <!-- <p class="sub-title">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+         ex
+         ea commodo consequat.</p> -->
+       
+         <!-- <div class="col-md-6 column1 pr-md-0 hover-grid">
+           <a href="single.html">
+            <img src="/static/images/portfolio2.jpg" alt="" class="img-fluid" />
+           </a>
+           </div> -->
+      <div class="row portfolio1-content">
+      {% for x in port %}
+         <div class="mt-md-0 mt-4 pr-md-0">
+           <div class="row portfolio1-content1">
+             <div class="col-6 column3 pr-md-0 hover-grid">
+            <img src="{{x.images.url}}" style="width: 300px;height: 300px; object-fit: cover;" alt="">
+             </div>
+           </div>
+         </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+           <!-- <div class="row portfolio1-content1 mt-3">
+             <div class="col-6 column5 pr-md-0 hover-grid">
+               <a href="single.html">
+                 <img src="/static/images/portfolio4.jpg" alt="" class="img-fluid" />
+               </a>
+             </div>
+             <div class="col-6 column6  pr-md-0 hover-grid">
+               <a href="single.html">
+                <img src="/static/images/portfolio5.jpg" alt="" class="img-fluid" />
+               </a>
+             </div>
+           </div> -->
+
+   <!-- </div> -->
+ </section>
+ <!-- //portfolio1 -->
+ <div class="display-ad" style="margin: 8px auto; display: block; text-align:center;">
+        <!---728x90--->
+
+    </div>
+{% endblock %}

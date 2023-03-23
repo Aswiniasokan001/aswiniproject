@@ -1,0 +1,87 @@
+{% extends "admin/footer.html" %}
+{% block content %}
+<!-- main content start -->
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin_ndex/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Condact</li>
+            </ol>
+        </nav>
+        <!-- //breadcrumbs -->
+        <!-- forms -->
+        <section class="forms">
+            <!-- forms 1 -->
+            <div class="card card_border py-2 mb-4">
+                <div class="cards__heading">
+                    <h3>Condacts <span></span></h3>
+                </div>
+                <div class="card-body">
+
+                    <style>
+                        table {
+                            border-collapse: collapse;
+                            width: 100%;
+                        }
+                        th {
+                            background-color: #96D4D4;
+                        }
+                        th, td {
+                            padding: 8px;
+                            text-align: left;
+                            border-bottom: 1px solid #DDD;
+                            border: 1px solid black;
+                        }
+                    tr:hover {background-color: #D6EEEE;}
+                </style>
+                      
+                        <table style="width: 100%">
+                        
+                          <tr>
+                            <th>sno</th>
+                            <th>Name</th>
+                            <!-- <th>email</th> -->
+                            <th>Number</th>
+                            <th>Message</th>
+                           <!--  <th>Delete</th> -->
+                          </tr>
+                        
+                        {% for x in data %}
+                          <tr>
+                            <td>{{forloop.counter}}</td>
+                            <td>{{x.Name}}</td>
+                            <!-- <td>{{x.email}}</td> -->
+                            <td>{{x.Number}}</td>
+                            <td>{{x.Message}}</td>
+                            <!-- <td><a href="/contact_delete/?uid={{x.id}}"><i class="fa fa-trash"></i></a></td> -->
+                        
+                          </tr>
+                           {% endfor %}
+                      </table>
+                </div>
+            </div>
+            <!-- //forms 1 -->
+
+            <!-- forms 2 -->
+            
+            <!-- // -->
+            <!-- supported elements -->
+
+        </section>
+        <!-- //forms -->
+        </section>
+        <!-- //forms  -->
+
+    </div>
+    <!-- //content -->
+
+</div>
+<!-- main content end-->
+</section>
+
+{% endblock %}
